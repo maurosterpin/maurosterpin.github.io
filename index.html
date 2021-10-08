@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-white">
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-gray-400 shadow-xl" >Up</button>
     <div class="bg-gray-100 rounded-xl w-8/12 mx-auto mt-12 text-center p-10">
         <img src="img/profile.jpg" class="rounded-xl shadow-xl w-3/12 mx-auto border-2 border-white" alt="profile picture">
         <h1 class="text-3xl font-semibold mt-8">Mauro Šterpin</h1>
@@ -30,8 +31,8 @@
             <a target="blank" href="https://drive.google.com/file/d/1NCsoheb-fy837oSoF9q4Df6UnegZ1LlB/view"><img src = "img/dogeLogo.png" alt = "dogelogo" class="rounded-xl shadow-xl mx-auto hover:scale-50 border-4 border-white bg-gray-300" ></a>
 
             <h3 class="text-2xl font-semibold mt-12">Link Save</h3>
-            <h4 class=" text-1xl font-semibold mt-10 mb-10">Google Chrome extenzija za saveanje linkova</h4>
-            <a target="blank" href="https://drive.google.com/file/d/1NCsoheb-fy837oSoF9q4Df6UnegZ1LlB/view"><img src = "img/linkSaverLogo.png" alt = "linksaverlogo" class="rounded-xl shadow-xl mx-auto hover:scale-50 border-4 border-white bg-gray-300" ></a>
+            <h4 class=" text-1xl font-semibold mt-10 mb-10">Google Chrome extenzija za saveanje linkova (dostupno za download no mora se manualno instalirati jer ga nisam stavio na chrome web store)</h4>
+            <a target="blank" href="https://drive.google.com/file/d/1ko-zHDCGW0dlANaQAXYGzd0RmOwOlSFL/view?usp=sharing"><img src = "img/linkSaverLogo.png" alt = "linksaverlogo" class="rounded-xl shadow-xl mx-auto hover:scale-50 border-4 border-white bg-gray-300" ></a>
 
         </div>
             <div class= "bg-gray-100 rounded-xl w-8/12 mx-auto mt-12 p-10 mb-10">
@@ -79,5 +80,23 @@
               </form>
             </div>
               </div>
+              <script>
+                const mybutton = document.getElementById("myBtn");
+                
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+                </script>
     </body>
 </html>
